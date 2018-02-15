@@ -1,0 +1,16 @@
+<h1>Search Images</h1>
+
+<form role="form" ng-submit="onSubmit()">
+	<input type="text" name="search" ng-model="searchKey">
+	<button type="submit"> Search</button>
+</form>
+
+
+<div>
+	<div ng-if="isProcessing" style="text-align: center;">
+		<i class="fa fa-circle-o-notch fa-spin" style="font-size:24px;"></i>
+	</div>
+	<div ng-repeat="image in searchResult.images" style="display: inline-block;">
+		<img ng-src="{{image.thumb_url}}" height="{{image.thumb_height}}" width="{{image.thumb_width}}" >
+	</div>
+</div>

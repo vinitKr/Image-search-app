@@ -1,0 +1,17 @@
+<div ng-init="getSearchHistory()">
+<h1>History</h1>
+	<div ng-if="isProcessing" style="text-align: center;">
+		<i class="fa fa-circle-o-notch fa-spin" style="font-size:24px;"></i>
+	</div>
+
+	<table>
+		<tr>
+			<th>S. No.</th>
+			<th> Search key</th>
+		</tr>
+	   <tr ng-repeat="item in history">
+	        <td>{{$index + 1}}</td>
+	    	<td><a href="#!results/{{item.searchKey}}">{{item.searchKey}}</td>
+	   </tr>
+	</table>
+</div>
