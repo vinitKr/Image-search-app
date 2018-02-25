@@ -1,20 +1,24 @@
-	<!DOCTYPE html>
-	<html>
-	<head>
-		<title>Image search app</title>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
-		<script type="text/javascript" src="app.js"></script>
-	</head>
+<!DOCTYPE html>
+<html>
 
-	<body ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<base href="/">
+	<title>Image search app</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
 
-		<p>
-			<a href="#">Search Image</a>
-			<a href="#!history">Search history</a>
-		</p>
+<body ng-app="myApp">
 
-		<div ng-view></div>
-	</body>
-	</html>
+	<p>
+		<a href="/">Search Image</a> |
+		<a href="/history">History</a>
+	</p>
+
+	<div ng-view></div>
+</body>
+
+</html>

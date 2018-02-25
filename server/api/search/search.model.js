@@ -4,11 +4,11 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
     ObjectId = Schema.ObjectId;
 
-var ImageSchema = new Schema({
+var SearchCollection = new Schema({
   	
   	searchKey: String,
 	images: []
 
 }, { timestamps: true });
 
-module.exports = mongoose.model('ImageSchema', ImageSchema);
+module.exports = mongoose.model('SearchCollection', SearchCollection);

@@ -4,14 +4,15 @@
 		<i class="fa fa-circle-o-notch fa-spin" style="font-size:24px;"></i>
 	</div>
 
-	<table>
+	<table ng-if="history.length">
 		<tr>
 			<th>S. No.</th>
 			<th> Search key</th>
 		</tr>
 	   <tr ng-repeat="item in history">
 	        <td>{{$index + 1}}</td>
-	    	<td><a href="#!results/{{item.searchKey}}">{{item.searchKey}}</td>
+	    	<td><a href="/results/{{item.searchKey}}">{{item.searchKey}}</td>
 	   </tr>
 	</table>
+	<h3 ng-if="!isProcessing && !history.length">No result</h3>
 </div>

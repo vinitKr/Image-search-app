@@ -1,5 +1,5 @@
 var app = angular.module("myApp", ["ngRoute"]);
-app.config(function($routeProvider) {
+app.config(function($routeProvider, $locationProvider) {
     $routeProvider
     .when("/", {
         templateUrl : "templates/search-image.html",
@@ -16,6 +16,7 @@ app.config(function($routeProvider) {
     .otherwise({
         template : "<h1>None</h1><p>Nothing has been selected</p>"
     });
+    $locationProvider.html5Mode(true);
 });
 app.controller("searchCtrl", function ($scope, $http, $location) {
     var baseUrl = 'http://localhost:3000';

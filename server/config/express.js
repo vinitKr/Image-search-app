@@ -27,8 +27,8 @@ module.exports = function(app) {
 
     if ('production' === env) {
         console.log("production mode on");
-        app.use(express.static(path.join(config.root, 'dist')));
-        app.set('appPath', path.join(config.root, 'dist'));
+        app.use(express.static(path.join(config.root, 'client')));
+        app.set('appPath', path.join(config.root, 'client'));
         app.use(morgan('dev'));
     }
 
